@@ -2,11 +2,11 @@
 import { useRouter } from 'next/router';
 import Layout from '@/app/layout';
 import '../app/globals.css'; // Import global styles
+import type { AppProps } from 'next/app';
 
-export default function MyApp({ Component, pageProps }: any) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  // List of routes where we don't want the Layout (e.g., login)
   const noLayoutNeeded = ['/login'];
 
   return (
